@@ -1,3 +1,4 @@
+import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import { ALL_CATEGORIES_QUERY } from "@/lib/sanity/queries/categories";
 import {
   FEATURED_PRODUCTS_QUERY,
@@ -79,7 +80,7 @@ export default async function Home({ searchParams }: PageProps) {
   return (
     <main>
       <Suspense fallback={<div>Loading ...</div>}>
-        {/* featureCarouselProducts */}
+        <FeaturedCarousel products={featuredProducts} />
       </Suspense>
     </main>
   );
