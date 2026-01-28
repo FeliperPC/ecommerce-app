@@ -1,3 +1,5 @@
+import { CartSheet } from "@/components/CartSheet";
+import { Header } from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
 import { CartStoreProvider } from "@/lib/store/cart-store-provider";
 import { ChatStoreProvider } from "@/lib/store/chat-store-provider";
@@ -9,7 +11,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <ClerkProvider>
       <CartStoreProvider>
         <ChatStoreProvider>
+          <Header />
           <main>{children}</main>
+          <CartSheet />
           <Toaster position="bottom-center" />
         </ChatStoreProvider>
       </CartStoreProvider>
