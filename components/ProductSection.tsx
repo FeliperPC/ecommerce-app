@@ -6,9 +6,6 @@ import { Button } from "@/components/ui/button";
 import { ProductSectionProps } from "@/types";
 import { ProductFilters } from "./ProductFilters";
 import { ProductGrid } from "./ProductGrid";
-// import { ProductGrid } from "./ProductGrid";
-
-
 
 export function ProductSection({
   categories,

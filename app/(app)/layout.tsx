@@ -1,10 +1,15 @@
+import { Toaster } from "@/components/ui/sonner";
+import { CartStoreProvider } from "@/lib/store/cart-store-provider";
 import { SanityLive } from "@/sanity/lib/live";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <ClerkProvider>
-      <main>{children}</main>
+      <CartStoreProvider>
+        <main>{children}</main>
+        <Toaster position="bottom-center" />
+      </CartStoreProvider>
       <SanityLive />
     </ClerkProvider>
   );

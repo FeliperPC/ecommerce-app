@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Grid2x2 } from "lucide-react";
-import { ALL_CATEGORIES_QUERY_RESULT } from "@/sanity.types";
 import { CategoryTilesProps } from "@/types";
 
 export function CategoryTiles({
